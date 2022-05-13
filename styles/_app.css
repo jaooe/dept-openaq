@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./base.css');
+@import url(./typography.css);
+
+
+.autocomplete ::-webkit-scrollbar {
+  width: 28px;
+}
+
+
+.autocomplete ::-webkit-scrollbar-thumb {
+  border: 10px solid transparent;
+  background-clip: padding-box;
+  background-color: #ccc;
+}
+
+.autocomplete.large-list ::-webkit-scrollbar-thumb {
+  border-top: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  background-color: #ccc;
+}
