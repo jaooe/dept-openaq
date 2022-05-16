@@ -42,7 +42,7 @@ export default function Home() {
         </section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-0 xl:px-40">
           {locations.map((location, i) => {
-            return <Card key={location.id} onClose={() => removeLocation(i)} key={i} location={location} />
+            return <Card key={location.id} onClose={() => removeLocation(i)} location={location} />
           })}
         </div>
       </main >
