@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 const LARGE_LIST_THRESHOLD = 30;
 
-export default ({ icon, placeholder, onSelect = (option) => { }, options = [] }) => {
+const AutoComplete = ({ icon, placeholder, onSelect = (option) => { }, options = [] }) => {
     const [value, setValue] = useState('');
     const [autocompleteOptions, setAutoCompleteOptions] = useState([]);
     const [selected, setSelected] = useState(null);
@@ -46,3 +46,5 @@ export default ({ icon, placeholder, onSelect = (option) => { }, options = [] })
         </div>
     )
 }
+
+export default AutoComplete;

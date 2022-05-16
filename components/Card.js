@@ -1,6 +1,6 @@
 import { useLatestMeasurements } from "../lib-cl/api/api";
 
-export default ({ location, onClose = () => { } }) => {
+const Card = ({ location, onClose = () => { } }) => {
     const { id, name } = location;
     const { data: latestMeasurements, error: latestMeasurementsError } = useLatestMeasurements(id)
     const measurement = latestMeasurements?.results[0];
@@ -32,3 +32,5 @@ export default ({ location, onClose = () => { } }) => {
         </div>
     )
 }
+
+export default Card;
