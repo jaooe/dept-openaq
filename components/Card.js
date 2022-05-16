@@ -23,7 +23,7 @@ export default ({ location, onClose = () => { } }) => {
                         <p className="text-xs">{`in ${measurement.city}, Great Britain`}</p>
                         <div className="font-bold text-xs">
                             <span>Values: </span>
-                            {measurement.measurements?.map(({ parameter, value }) => <span className="uppercase">{parameter}: {value}</span>)}
+                            {measurement.measurements?.map(({ parameter, value }) => <span key={parameter} className="uppercase">{parameter}: {value}</span>)}
                         </div>
                     </>
                 }

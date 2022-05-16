@@ -41,7 +41,7 @@ export default ({ icon, placeholder, onSelect = (option) => { }, options = [] })
                 }}
                 className="text-left max-h-36 overflow-y-scroll overflow-x-overlay  rounded-md"
             >
-                {!selected && autocompleteOptions.map(({ text, id }) => <span onClick={() => select({ text, id })} className="w-full px-4 py-1 block hover:bg-gray-200 hover:cursor-pointer">{text}</span>)}
+                {!selected && autocompleteOptions.map(({ text, id }) => <span key={text} onClick={() => select({ text, id })} className="w-full px-4 py-1 block hover:bg-gray-200 hover:cursor-pointer">{text}</span>)}
             </div>
         </div>
     )
